@@ -1,0 +1,5 @@
+[core]
+	editor = \"C:\\Program Files\\Microsoft VS Code Insiders\\bin\\code-insiders\" --wait
+[user]
+	email = david.gray.lassiter@gmail.com
+	name = D
