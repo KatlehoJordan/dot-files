@@ -228,3 +228,22 @@ bindsym $mod+Shift+x mode "exit: [l]ogout, [r]eboot, [s]hutdown, loc[k]"
 # WARNING: this will not work if displays have a different name!
 #          so this is not portable and it is risky putting it in the config!
 exec_always --no-startup-id xrandr --output HDMI-1 --above eDP-1
+
+## Screenshots
+# https://dev.to/dianjuar/i3wm-screenshot-shortcuts-3n7b
+
+### Saved automatically to ~/Pictures/CURRENT_DATE
+# Full Screen                   :       PrtScrn
+# Selection                     :       Shift + PrtScrn
+# Active Window                 :       Super + PrtScrn
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date +'%Y%m%d_%T')"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date +'%Y%m%d_%T')"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date +'%Y%m%d_%T')"
+
+### Stored to Clipboard
+# Clipboard Full Screen         :       Ctrl + PrtScrn
+# Clipboard Selection           :       Ctrl + Shift + PrtScrn
+# Clipboard Active Window       :       Ctrl + Super + PrtScrn
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png

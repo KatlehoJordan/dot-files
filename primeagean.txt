@@ -42,6 +42,8 @@ https://i3wm.org/docs/userguide.html#:~:text=2.10.-,Exiting%20i3,you%20really%20
         - Just have to be disciplined and use `code <my file>`
 
 - PERMANENTLY FIXED
+    - How to take and save screenshots?
+        - https://dev.to/dianjuar/i3wm-screenshot-shortcuts-3n7b
     - Need to remap keys:
         - Maybe this will help? https://faq.i3wm.org/question/1496/change-caps-lock-to-esc-in-i3.1.html
         - These two remove caps lock functionality completely without moving it to escape key
