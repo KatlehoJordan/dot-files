@@ -4,6 +4,31 @@ https://www.youtube.com/watch?v=bdumJlHabhQ
 
 windows manager: i3
 uses alt 1 or alt 2 or alt 3 to bounce between workspaces
+- If using windows as the modifier key, relatively intuitive to bounce between apps (windows + arrow)
+- Also easy to move them (windows + shift + arrow)
+- Also easy to move between workspaces (windows + number)
+- Also easy to move apps to other workspaces (windows + shift + number)
+- Need to remap keys:
+    - Maybe this will help? https://faq.i3wm.org/question/1496/change-caps-lock-to-esc-in-i3.1.html
+    - These two remove caps lock functionality completely without moving it to escape key
+    	- xmodmap -e "clear lock"
+    	- xmodmap -e "keysym Caps_lock = Escape"
+    	- Alternatively try:
+    		- setxkbmap -layout us -option caps:escape
+    - Adds escape but does not remove caps lock: https://jaketrent.com/post/remap-keys-i3/
+        - xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+    - Not sure if this would work if done first: https://www.reddit.com/r/i3wm/comments/2xoo9m/what_is_the_best_way_to_remap_ctrlkey_with/?rdt=57123
+        - setxkbmap -option escape:swapcaps
+- Mouse continuity between screens is not as intuitive (left to right, not top to bottom)
+- Need to find out to create new workspaces for further extensibility
+- also, using open from tmux here seems to lock the terminal session until the opened file is closed (I don't think I saw this in the non-i3 windows manager)
+- also keeps logging me out of/breaking Google Chrome sync (if do not exit gracefully first)
+
+- key shortcuts to know
+    - windows + enter (launch a terminal)
+    - windows + shift + q (kill an application)
+    - windows + shift + e (end i3 session)
+    - windows + d (search for an app to start)
 
 terminal: tmux
 https://linuxhint.com/attach-tmux-to-existing-session/
