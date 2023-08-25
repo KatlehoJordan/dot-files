@@ -37,6 +37,7 @@ https://i3wm.org/docs/userguide.html#:~:text=2.10.-,Exiting%20i3,you%20really%20
         - To then rearrange displays: `xrandr --output <name of upper display> --above <name of lower display>
             - Other directions: --below --right-of --left-of
             - https://www.thinkwiki.org/wiki/Xorg_RandR_1.2
+        - I have put this in my config, but WARNING, this will not work on other machines if the display names are not identical to those on my home setup
 
 - PERMANENTLY FIXED
     - Need to remap keys:
