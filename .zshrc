@@ -1,3 +1,9 @@
+# Launch terminal in tmux
+# https://www.tecmint.com/tips-for-tmux-terminal-sessions/
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -6,11 +12,12 @@ setopt extendedglob
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/david/.zshrc'
 
 autoload -Uz compinit
-compinit
+compinit -u
 # End of lines added by compinstall
 
 # Trying to modify prompt to show current folder location
