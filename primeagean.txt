@@ -1,0 +1,11 @@
+https://www.youtube.com/watch?v=bdumJIHabhQ
+or
+https://www.youtube.com/watch?v=bdumJlHabhQ
+
+windows manager: i3
+uses alt 1 or alt 2 or alt 3 to bounce between workspaces
+
+terminal: tmux
+https://linuxhint.com/attach-tmux-to-existing-session/
+
+ctrl f to fuzzy find anywhere?
