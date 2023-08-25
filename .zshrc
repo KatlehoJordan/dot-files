@@ -11,6 +11,11 @@ export PROJECTS="~/Desktop/Projects"
 export EDITOR='code'
 export VISUAL='code'
 
+# Aliases
+## Shortcuts to common places
+alias ..="cd .."
+alias projects="cd $PROJECTS"
+
 ## Bash shortcuts
 alias q="exit"
 alias c="clear"
