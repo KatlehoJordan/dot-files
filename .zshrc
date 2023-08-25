@@ -4,28 +4,17 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
 
-# Making code the default code editor
+# Variables
+export PROJECTS="~/Desktop/Projects"
+
+## Making code the default code editor
 export EDITOR='code'
 export VISUAL='code'
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt extendedglob
-unsetopt beep
-bindkey -v
-# End of lines configured by zsh-newuser-install
-
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/david/.zshrc'
-
-autoload -Uz compinit
-compinit -u
-# End of lines added by compinstall
-
-# Trying to modify prompt to show current folder location
-PS1='In directory %1d> '
+## Bash shortcuts
+alias q="exit"
+alias c="clear"
+alias h="history"
 
 ## Git shortcuts
 # Ending all lines in the Linux style, LF (line feed),
@@ -49,3 +38,48 @@ alias gacmm="git add .; git commit -m 'Resolve merge conflicts'"
 alias gpl="git pull"
 alias gps="git push"
 alias gr="git restore"
+
+## Aliases that only work if relevant files are in wd
+alias i="sh scripts/init.sh"
+alias gacp="sh scripts/gacp.sh"
+
+## Shortcuts to current projects
+### No shortcuts to budget tracker since it is a macro-enabled excel file
+
+alias journal="
+    START_WD=$(pwd)
+    echo Move to journal
+    cd $PROJECTS/journal
+    echo Performing git backup
+    gacp
+    echo Opening journal
+    code $PROJECTS/journal
+    echo Initializing journal for the day
+    i
+    echo Move to original directory
+    cd $START_WD
+    "
+
+### No shortcuts to poker hands or python playground since those are built
+### with docker and that is not used in the Ubuntu setup
+
+alias notes="code $PROJECTS/notes"
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt extendedglob
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
+
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/david/.zshrc'
+
+autoload -Uz compinit
+compinit -u
+# End of lines added by compinstall
+
+# Modify prompt to show current folder location
+PS1='In directory %1d> '
