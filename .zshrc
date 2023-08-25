@@ -46,20 +46,7 @@ alias gacp="sh scripts/gacp.sh"
 ## Shortcuts to current projects
 ### No shortcuts to budget tracker since it is a macro-enabled excel file
 
-alias journal="
-    START_WD=$(pwd)
-    echo Move to journal
-    cd $PROJECTS/journal
-    echo Performing git backup
-    gacp
-    echo Opening journal
-    code $PROJECTS/journal
-    echo Initializing journal for the day
-    i
-    echo Move to original directory
-    cd $START_WD
-    "
-
+### No shortcuts to journal since would require changing some bash syntax
 ### No shortcuts to poker hands or python playground since those are built
 ### with docker and that is not used in the Ubuntu setup
 
