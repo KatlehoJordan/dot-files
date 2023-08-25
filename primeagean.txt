@@ -25,11 +25,6 @@ https://i3wm.org/docs/userguide.html#:~:text=2.10.-,Exiting%20i3,you%20really%20
 
 ### Problems
 
-- Need to find out to create new workspaces for further extensibility
-- also, using open from tmux here seems to lock the terminal session until the opened file is closed (I don't think I saw this in the non-i3 windows manager)
-- also keeps logging me out of/breaking Google Chrome sync (if do not exit gracefully first)
-- also does not use code to open text files when using `open`
-
 - INCOMPLETELY FIXED
     - Mouse continuity between screens is not as intuitive (left to right, not top to bottom)
         - https://www.reddit.com/r/i3wm/comments/5abvb6/swapping_monitor_position/
@@ -38,6 +33,13 @@ https://i3wm.org/docs/userguide.html#:~:text=2.10.-,Exiting%20i3,you%20really%20
             - Other directions: --below --right-of --left-of
             - https://www.thinkwiki.org/wiki/Xorg_RandR_1.2
         - I have put this in my config, but WARNING, this will not work on other machines if the display names are not identical to those on my home setup
+    - also keeps logging me out of/breaking Google Chrome sync (if do not exit gracefully first)
+        - Exit all apps gracefully (windows + shift + q) before exiting i3
+    - also, using open from tmux here seems to lock the terminal session until the opened file is closed (I don't think I saw this in the non-i3 windows manager)
+        - https://superuser.com/questions/513496/how-can-i-run-a-command-from-the-terminal-without-blocking-it
+        - when using `open`, append with ` & disown` to keep the terminal active and dissociate the terminal from the running application
+    - also does not use code to open text files when using `open`
+        - Just have to be disciplined and use `code <my file>`
 
 - PERMANENTLY FIXED
     - Need to remap keys:
@@ -53,9 +55,13 @@ https://i3wm.org/docs/userguide.html#:~:text=2.10.-,Exiting%20i3,you%20really%20
             - setxkbmap -option escape:swapcaps
     - Do not know how to quit i3 without the mouse
         - https://unix.stackexchange.com/questions/483934/how-can-i-exit-i3-without-using-a-mouse
+    - Need to find out to create new workspaces for further extensibility
+        - Choose an open application, then use windows + shift + <number> to create the new workspace
 
 ## terminal: tmux
 
 https://linuxhint.com/attach-tmux-to-existing-session/
+https://tmuxcheatsheet.com/
+
 
 ctrl f to fuzzy find anywhere?
