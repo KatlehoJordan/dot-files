@@ -32,6 +32,9 @@ nvim
 vs code
 7zip
 chrome
+python (3.11.4)
+curl
+[poetry (1.6.1)](https://python-poetry.org/docs/)
 
 ## Notes regarding setup as inspired by The Primeagean
 
