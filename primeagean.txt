@@ -25,10 +25,9 @@ https://i3wm.org/docs/userguide.html#:~:text=2.10.-,Exiting%20i3,you%20really%20
 
 ### Problems
 
-- NOT FIXED
-    - Failed to shut down from i3 successfully last time, requiring a hard shut down
-
 - INCOMPLETELY FIXED
+    - Failed to shut down from i3 successfully last time, requiring a hard shut down
+        - Failed to modify the i3/config file so that the shutdown hot key works. However, figured out that Ubuntu will shutdown if you push the shutdown button on the computer, and that seems to work fine. The other hotkeys work well, including the lock screen function; type your password to unlock.
     - Mouse continuity between screens is not as intuitive (left to right, not top to bottom)
         - https://www.reddit.com/r/i3wm/comments/5abvb6/swapping_monitor_position/
         - To see displays: `xrandr`
