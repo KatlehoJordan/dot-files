@@ -34,7 +34,7 @@ vs code
 chrome
 python (3.11.4)
 curl
-[poetry (1.6.1)](https://python-poetry.org/docs/)
+[poetry (1.6.1)](https://python-poetry.org/docs/) - follow instructions for adding shell completions also
 
 ## Notes regarding setup as inspired by The Primeagean
 
