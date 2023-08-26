@@ -11,8 +11,12 @@ export PROJECTS="~/Desktop/Projects"
 export EDITOR='code'
 export VISUAL='code'
 
-## Making poetry (and others) accessible from command line
+## Variables for poetry
+### Making poetry (and others) accessible from command line
 export PATH="/home/david/.local/bin:$PATH"
+
+### Necessary variable to allow poetry install to work with poetry.lock files
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring poetry install
 
 # Aliases
 ## Shortcuts to common places
