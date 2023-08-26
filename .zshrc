@@ -11,6 +11,9 @@ export PROJECTS="~/Desktop/Projects"
 export EDITOR='code'
 export VISUAL='code'
 
+## Making poetry (and others) accessible from command line
+export PATH="/home/david/.local/bin:$PATH"
+
 # Aliases
 ## Shortcuts to common places
 alias ..="cd .."
