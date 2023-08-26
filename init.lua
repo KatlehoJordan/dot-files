@@ -25,7 +25,7 @@ vim.keymap.set('n', '<leader>O', 'O<Esc>j0')
 vim.keymap.set('n', '<leader>c', ':nohlsearch<Enter>')
 
 -- Paste over rest of word with current selection
-vim.keymap.set('n', '<leader>p', 'cw<C-r>0<Esc>x')
+vim.keymap.set('n', '<leader>p', 'cw<C-r>0<Esc>l')
 
 -- Modify `S` behavior so does not remove entire line but just from current
 vim.keymap.set('n', 'S', 'DA')
