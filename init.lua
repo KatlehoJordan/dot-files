@@ -1,6 +1,6 @@
 -- Use relative line numbers
 vim.opt.relativenumber = true
--- Use absolute line number in guter
+-- Use absolute line number in gutter
 vim.opt.number = true
 -- Shows row and column number in bottomright of terminal
 vim.opt.ruler = true
@@ -16,27 +16,30 @@ vim.opt.is = true
 
 -- vim.keymap.set configurations that work both in standalone-nvim and VS Code:
 
--- Keybindings to insert blank rows above or below without going into insert mode
+-- Keybindings to insert blank rows above or below without going into insert
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>o', 'o<Esc>k$')
 vim.keymap.set('n', '<leader>O', 'O<Esc>j0')
 
--- Modify `S` behavior so does not remove entire line but just from current placement
-vim.keymap.set('n', 'S', 'DA')
+-- Clear nvim highlighting
+vim.keymap.set('n', '<leader>c', ':nohlsearch<Enter>')
 
--- Keybinding to clear highlighting of searched term by hitting enter
-vim.keymap.set('n', '<CR>', ':noh<CR><CR>')
+-- Paste over rest of word with current selection
+vim.keymap.set('n', '<leader>p', 'cw<C-r>0<Esc>x')
+
+-- Modify `S` behavior so does not remove entire line but just from current
+vim.keymap.set('n', 'S', 'DA')
 
 -- Quick way to write -- and --- in Markdown formats
 vim.keymap.set('n', '@n', 'qna &ndash; <Esc>q')
 vim.keymap.set('n', '@m', 'qma &mdash; <Esc>q')
 
--- Quick way to write | | | for making a two-column table row in Markdown formats
+-- Quick way to write | | | for making a two-column table row in Markdown
 vim.keymap.set('n', '@p', 'qpo<Esc>xi| | |<Esc>0q')
 
--- vim.keymap.set configurations that work in standalone-nvim but are ignored by VS Code:
-
--- Seems like the vim.keymap configs are not picked up by VS Code; see closed issue here: 
+-- vim.keymap.set configurations that work in nvim but are ignored by VS Code:
+-- Seems like the vim.keymap configs are not picked up by VS Code;
+-- see closed issue here: 
 -- https://github.com/vscode-neovim/vscode-neovim/issues/1089
 -- Keybindings to recenter cursor in window after a jump
 vim.keymap.set('n', '*', '*zz')
