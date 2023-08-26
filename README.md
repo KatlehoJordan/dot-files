@@ -74,7 +74,7 @@ I learned neovim predominantly by watching his videos, which are not linked here
   - Mouse continuity between screens is not as intuitive (left to right, not top to bottom)
     - <https://www.reddit.com/r/i3wm/comments/5abvb6/swapping_monitor_position/>
     - To see displays: `xrandr`
-    - To then rearrange displays: `xrandr --output <name of upper display> --above <name of lower display>
+    - To then rearrange displays: `xrandr --output <name of upper display> --above <name of lower display>`
       - Other directions: --below --right-of --left-of
       - <https://www.thinkwiki.org/wiki/Xorg_RandR_1.2>
     - I have put this in my config, but WARNING, this will not work on other machines if the display names are not identical to those on my home setup
@@ -87,16 +87,18 @@ I learned neovim predominantly by watching his videos, which are not linked here
     - Just have to be disciplined and use `code <my file>`
   - Upon starting up Linux kernel, getting error messages printed to the log:
     - <https://www.kubuntuforums.net/forum/currently-supported-releases/kubuntu-22-04-jammy-jellyfish/post-installation-ax/662598-boot-shut-down-errors-acpi-error-no-pointer-back-to-namespace-node-in-package>
-    - Basically, these warnings are unavoidable on some motherboards when running linux. But they are non-harmful.
+    - Basically, these warnings are unavoidable on some motherboards when running Linux. But they are non-harmful.
       - ACPI Error: No pointer back to namespace node in package (____ptr
             val____) (20221020/dsargs-301)
             /dev/sda5: clean, 275504/19980288 files, 10926123/79892480 blocks
-            ACPI Error: No pointerback to namespace node in package 00000000bab72184 (20221020/dsargs-301)
+            ACPI Error: No pointer back to namespace node in package 00000000bab72184 (20221020/dsargs-301)
             ACPI Error: Aborting method \_SB.PCI0.B0D4.PPCC due to previous error (AE_AML_INTERNAL) (20221020/psparse-)
 
             kfd kfd: amdgpu: TOPA2 not supported in kfd
 
 - PERMANENTLY FIXED
+  - How to access the settings to, for example, modify key-repeat speed?
+    - `env XDG_CURRENT_DESKTOP=GNOME gnome-control-center`
   - How to take and save screenshots?
     - <https://dev.to/dianjuar/i3wm-screenshot-shortcuts-3n7b>
   - Need to remap keys:
@@ -113,7 +115,7 @@ I learned neovim predominantly by watching his videos, which are not linked here
   - Do not know how to quit i3 without the mouse
     - <https://unix.stackexchange.com/questions/483934/how-can-i-exit-i3-without-using-a-mouse>
   - Need to find out to create new workspaces for further extensibility
-    - Choose an open application, then use windows + shift + <number> to create the new workspace
+    - Choose an open application, then use windows + shift + number to create the new workspace
 
 ## terminal: tmux
 
