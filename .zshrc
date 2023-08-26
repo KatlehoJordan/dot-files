@@ -16,10 +16,13 @@ export VISUAL='code'
 alias ..="cd .."
 alias projects="cd $PROJECTS"
 
-## Bash shortcuts
+## zsh shortcuts
 alias q="exit"
 alias c="clear"
 alias h="history"
+
+## python shortcuts
+alias python="python3"
 
 ## Git shortcuts
 # Ending all lines in the Linux style, LF (line feed),
