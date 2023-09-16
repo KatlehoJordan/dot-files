@@ -31,6 +31,9 @@ alias h="history"
 ## python shortcuts
 alias python="python3"
 
+## chrome
+alias chrome="google-chrome-stable & disown"
+
 ## Git shortcuts
 # Ending all lines in the Linux style, LF (line feed),
 # instead of CRLF (carriage return, line feed)
