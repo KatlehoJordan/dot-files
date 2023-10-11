@@ -24,6 +24,9 @@ vim.keymap.set('n', '<leader>O', 'O<Esc>j0')
 -- Clear nvim highlighting
 vim.keymap.set('n', '<leader>c', ':nohlsearch<Enter>')
 
+-- Keybinding to clear highlighting of searched term by hitting enter
+vim.keymap.set('n', '<CR>', ':noh<CR><CR>')
+
 -- Paste over rest of word with current selection
 vim.keymap.set('n', '<leader>p', 'cw<C-r>0<Esc>l')
 
