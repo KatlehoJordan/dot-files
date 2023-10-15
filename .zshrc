@@ -99,5 +99,6 @@ zstyle ':vcs_info:git:*' formats 'on branch %b'
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-PROMPT='In directory %1d ${vcs_info_msg_0_}
+PROMPT='
+In directory %1d ${vcs_info_msg_0_}
 > '
