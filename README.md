@@ -99,6 +99,8 @@ I learned neovim predominantly by watching his videos, which are not linked here
 - PERMANENTLY FIXED
   - How to change to US international keymap:
     - From terminal `setxkbmap -layout us -variant intl` (askubuntu.com/questions/963659)
+  - How to add/connect to alternative wireless networks
+    - From terminal `nmtui` (askubuntu.com/questions/896140)
   - How to access the settings to, for example, modify key-repeat speed?
     - `env XDG_CURRENT_DESKTOP=GNOME gnome-control-center`
   - How to take and save screenshots?
