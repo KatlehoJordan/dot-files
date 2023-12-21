@@ -19,7 +19,7 @@ flux
 bank ID
 docker desktop
 mullvad vpn
-sharpkeys (to remap esc and caps lock)
+PowerToys (for keyboard remapping)
 nvim
 lua
 
