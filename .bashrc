@@ -24,7 +24,7 @@ alias rm="rm -rf"
 
 ## Programs not in the path
 # alias code="code-insiders"
-alias nvim="$PROGRAM_FILES/nvim-win64/bin/nvim.exe"
+alias nvim="$PROGRAM_FILES/Neovim/bin/nvim.exe"
 alias 7z="$PROGRAM_FILES/7-Zip/7zFM.exe"
 
 ## Bash shortcuts
