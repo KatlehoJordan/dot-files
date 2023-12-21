@@ -13,6 +13,7 @@ PROGRAM_FILES="/C/Program\ Files"
 ## Shortcuts to common places
 alias ..="cd .."
 alias projects="cd $PROJECTS"
+alias desktop="cd ~/Desktop"
 alias edit-init.lua="code /C/Users/D/AppData/Local/nvim/init.lua" 
 alias edit-bashrc="code $BASHRC"
 alias src-bashrc="source $BASHRC"
