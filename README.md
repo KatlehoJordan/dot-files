@@ -9,7 +9,7 @@ This repository is to capture my various dot-files, settings, etc.
 git bash
 chrome
 snipping tool
-vs code
+vs code (on re-importing [profile](https://github.com/microsoft/vscode/issues/168867))
 signal
 MS teams
 MS Office (Excel, Word, Powerpoint)
