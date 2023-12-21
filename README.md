@@ -19,9 +19,14 @@ flux
 bank ID
 docker desktop
 mullvad vpn
-sharpkeys (to remap esc and caps lock)
+PowerToys (for keyboard remapping)
 nvim
 lua
+
+### Special tips
+
+- [On line endings](https://www.shellcheck.net/wiki/SC1017)
+- [On re-importing VS Code profile](https://github.com/microsoft/vscode/issues/168867)
 
 ### Ubuntu
 
