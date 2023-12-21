@@ -9,7 +9,7 @@ This repository is to capture my various dot-files, settings, etc.
 git bash
 chrome
 snipping tool
-vs code (on re-importing [profile](https://github.com/microsoft/vscode/issues/168867))
+vs code
 signal
 MS teams
 MS Office (Excel, Word, Powerpoint)
@@ -22,6 +22,11 @@ mullvad vpn
 PowerToys (for keyboard remapping)
 nvim
 lua
+
+### Special tips
+
+- [On line endings](https://www.shellcheck.net/wiki/SC1017)
+- [On re-importing VS Code profile](https://github.com/microsoft/vscode/issues/168867)
 
 ### Ubuntu
 
