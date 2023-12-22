@@ -10,6 +10,8 @@
         "setxkbmap",
         "sharpkeys",
         "swapcaps",
+        "XLSB",
+        "XLSTART",
         "xrandr"
     ]
 }

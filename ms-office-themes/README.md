@@ -12,9 +12,24 @@ I thought it had MS Office themes for Microsoft word, powerpoint, and excel. The
 
 Copying the contents of `~/AppData/Roaming/Microsoft/Templates/Document Themes` will make your colors and fonts available in Powerpoint and Excel. One must actively select the 'DGL' theme in those software to access your theme, but it should be available.
 
-### Theme details
+## MS Excel
 
-## Colors
+Excel macros are saved in visual basic (VB) scripts that can be used in all workbooks. To make them accessible in all Excel files, they need to be saved in `PERSONAL.XLSB`. This is usually saved in folder called `XLSTART`, for example in `~/AppData/Romaing/Microsoft/Excel/XLSTART`.
+
+To find the location, though, regardless of the specific location, one can:
+
+- Open up Excel
+- Open up a VBA script editor (e.g., with `alt+F11`)
+- Open up the 'immediate window' (e.g., with `ctrl+g`)
+- Run this code: `? application.StartupPath`
+
+After adding the VBA script/s to the `PERSONAL.XLSB` file, you can create the shortcut links in Excel by modifying the Excel options.
+
+The `Module1.vb` included herein is the plaintext version of the VBA scripts I typically pull into `PERSONAL.XLSB`.
+
+## Theme details
+
+### Colors
 
 - dk1: 000000 (Black)
 - lt1: FFFFFF (White)
@@ -29,8 +44,17 @@ Copying the contents of `~/AppData/Roaming/Microsoft/Templates/Document Themes` 
 - hlink: FE9F6D (Light Orange)
 - folHlink: FECE91 (Light Orange)
 
-## Fonts
+### Fonts
 
 - majorFont: Georgia
 - minorFont: Bahnschrift
 - not included, but used for monospace: Consolas
+
+## Other changes to make when setting up new computer
+
+- Language packages for Microsoft Office
+  - Swedish
+  - Catalan
+- Auto-complete rules
+  - two hyphens to make en-dash
+  - three hyphens to make em-dash
