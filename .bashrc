@@ -4,7 +4,7 @@
 
 # Variables
 LC_CTYPE="C"
-PROJECTS="~/Documents/Projects"
+PROJECTS="$HOME/Documents/Projects"
 BASHRC="$HOME/.bashrc"
 WSL_CONFIG="$HOME/.wslconfig"
 PROGRAM_FILES="/C/Program\ Files"
