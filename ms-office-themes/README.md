@@ -14,7 +14,7 @@ Copying the contents of `~/AppData/Roaming/Microsoft/Templates/Document Themes` 
 
 ## MS Excel
 
-Excel macros are saved in visual basic (VB) scripts that can be used in all workbooks. To make them accessible in all Excel files, they need to be saved in `PERSONAL.XLSB`. This is usually saved in folder called `XLSTART`, for example in `~/AppData/Romaing/Microsoft/Excel/XLSTART`.
+Excel macros are saved in visual basic (VB) scripts that can be used in all workbooks. To make them accessible in all Excel files, they need to be saved in `PERSONAL.XLSB`. This is usually saved in folder called `XLSTART`, for example in `~/AppData/Roaming/Microsoft/Excel/XLSTART`.
 
 To find the location, though, regardless of the specific location, one can:
 
