@@ -40,6 +40,12 @@ vim.keymap.set('n', '@m', 'qma &mdash; <Esc>q')
 -- Quick way to write | | | for making a two-column table row in Markdown
 vim.keymap.set('n', '@p', 'qpo<Esc>xi| | |<Esc>0q')
 
+-- Quick way to wrap a word in double quotes
+vim.keymap.set('n', '@d', 'qdciw""<Esc>Pq')
+
+-- Quick way to wrap a word in single quotes
+vim.keymap.set('n', '@s', "qsciw''<Esc>Pq")
+
 -- vim.keymap.set configurations that work in nvim but are ignored by VS Code:
 -- Seems like the vim.keymap configs are not picked up by VS Code;
 -- see closed issue here: 
