@@ -220,3 +220,13 @@ Finally, you can confirm it worked by opening a fresh bash terminal and running:
 ```sh
 poetry --version
 ```
+
+### Getting started with python
+
+These links provide information on getting started with python:
+
+- [Download for Windows](https://www.python.org/downloads/windows/)
+- [Tutorial](https://docs.python.org/3.12/tutorial/index.html)
+- [Python documentation](https://docs.python.org/3.12/index.html)
+- [What's new in 3.12](https://docs.python.org/3.12/whatsnew/3.12.html)
+- [Using Windows](https://docs.python.org/3.12/using/windows.html)
