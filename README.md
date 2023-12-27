@@ -41,6 +41,56 @@ python (3.11.4)
 curl
 [poetry (1.6.1)](https://python-poetry.org/docs/) - follow instructions for adding shell completions also
 
+## Other changes to make when setting up new computer
+
+- Language packages for Microsoft Office
+  - Swedish
+  - Catalan
+- Auto-complete rules
+  - two hyphens to make en-dash
+  - three hyphens to make em-dash
+
+## Using SSH
+
+To use SSH between computers you need to have the right software setup on your server and the client.
+
+These instructions are modified from [this link](https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/).
+
+Your server is likely to be a Linux machine.
+
+In your Linux machine:
+
+```sh
+sudo apt install openssh-server
+sudo systemctl enable ssh
+sudo ufw allow ssh
+```
+
+Then you will need to retrieve your IP address for the machine. IPv6 can be used.
+
+From the client:
+
+```sh
+ssh user@ip
+```
+
+Then enter the password when prompted. After connected, if you wish to disconnect:
+
+```sh
+exit
+logout
+```
+
+To use the SSH Extension with VS code, you will want to modify the file at `~/.ssh/config` so that it has this format:
+
+```plaintext
+Host memorable-name
+  User user
+  HostName IPv6-address
+```
+
+You should be able to connect to the server via a stand-alone terminal or VS Code now, although there is a known (apparently-harmless) bug in VS Code that asks for the password repeatedly although you have already been connected.
+
 ## Notes regarding setup as inspired by The Primeagean
 
 The Primeagean provided a couple of videos to show his developer setup on Linux.
@@ -98,7 +148,6 @@ I learned neovim predominantly by watching his videos, which are not linked here
             /dev/sda5: clean, 275504/19980288 files, 10926123/79892480 blocks
             ACPI Error: No pointer back to namespace node in package 00000000bab72184 (20221020/dsargs-301)
             ACPI Error: Aborting method \_SB.PCI0.B0D4.PPCC due to previous error (AE_AML_INTERNAL) (20221020/psparse-)
-
             kfd kfd: amdgpu: TOPA2 not supported in kfd
 
 - PERMANENTLY FIXED
@@ -126,7 +175,7 @@ I learned neovim predominantly by watching his videos, which are not linked here
   - Need to find out to create new workspaces for further extensibility
     - Choose an open application, then use windows + shift + number to create the new workspace
 
-## terminal: tmux
+### terminal: tmux
 
 <https://linuxhint.com/attach-tmux-to-existing-session/>
 <https://tmuxcheatsheet.com/>
