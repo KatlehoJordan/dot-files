@@ -181,3 +181,42 @@ I learned neovim predominantly by watching his videos, which are not linked here
 <https://tmuxcheatsheet.com/>
 
 ctrl f to fuzzy find anywhere?
+
+## Python with pyenv and poetry in Windows
+
+These instructions modified from [here](https://endjin.com/blog/2023/03/how-to-setup-python-pyenv-poetry-on-windows).
+
+Although one can install python system-wide, it is likely better to first have a virtual environment manager setup to manage your python versions. Thereafter, poetry is convenient for managing your python packages.
+
+Start by installing `pyenv`:
+
+```sh
+git clone https://github.com/pyenv-win/pyenv-win.git $HOME/.pyenv
+```
+
+Add it to the path by updating your `.bashrc` file.
+
+Then install your `python` version of choice, using `pyenv install --list` to find the version that is most recent and relevant for you. Then install and make the global version the same with:
+
+```sh
+pyenv install <version>
+pyenv global <version>
+```
+
+Next, to download the install file for `poetry`, it is possible from powershell with:
+
+```powershell
+Invoke-WebRequest -Uri "https://install.python-poetry.org" -UseBasicParsing -OutFile "$HOME/Downloads/install-poetry.py"
+```
+
+Then to install it, you go back to bash and run:
+
+```sh
+pyenv exec python $HOME/Downloads/install-poetry.py
+```
+
+Finally, you can confirm it worked by opening a fresh bash terminal and running:
+
+```sh
+poetry --version
+```

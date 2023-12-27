@@ -9,6 +9,12 @@ BASHRC="$HOME/.bashrc"
 WSL_CONFIG="$HOME/.wslconfig"
 PROGRAM_FILES="/C/Program\ Files"
 
+# Updating the path
+export PATH=$PATH:$HOME/.pyenv/pyenv-win/bin
+export PATH=$PATH:$HOME/.pyenv/pyenv-win/shims
+export PATH=$PATH:$HOME/AppData/Roaming/Python/Scripts
+
+
 # Aliases
 ## Shortcuts to common places
 alias ..="cd .."
