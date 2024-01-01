@@ -68,7 +68,8 @@ alias i="sh scripts/init.sh"
 alias gacp="sh scripts/gacp.sh"
 
 ## Shortcuts to current projects
-alias budget-tracker="start $PROJECTS/daily-scraping/inputs/budgetTracker2023.xlsm"
+THIS_YEAR=$(date +"%Y")
+alias budget-tracker="start $PROJECTS/daily-scraping/inputs/budgetTracker$THIS_YEAR.xlsm"
 
 alias debug-daily-scraping="code $PROJECTS/daily-scraping"
 alias daily-scraping="
