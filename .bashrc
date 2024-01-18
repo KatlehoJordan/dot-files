@@ -110,3 +110,19 @@ alias python-playground="code $PROJECTS/ds-playground/python"
 alias ipython="docker run --rm -i --name python-playground python-playground"
 
 alias notes="code $PROJECTS/notes"
+
+# Customizing the prompt
+parse_git_branch() {
+    local branch_name
+    branch_name=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    if [[ -n $branch_name ]]; then
+        echo " on branch $(tput setaf 4)$branch_name$(tput sgr0)"
+    fi
+}
+
+PS1="
+In directory \[\033[33m\]\$(basename \"\$PWD\")\[\033[0m\]\$(parse_git_branch)
+>"
+
+# Enable colorized output for ls and add details to ls outputs
+alias ls='ls --color=auto -alGp'
