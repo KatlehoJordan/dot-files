@@ -126,3 +126,6 @@ In directory \[\033[33m\]\$(basename \"\$PWD\")\[\033[0m\]\$(parse_git_branch)
 
 # Enable colorized output for ls and add details to ls outputs
 alias ls='ls --color=auto -alGp'
+
+# Enable Neovim-style key bindings
+set -o vi
