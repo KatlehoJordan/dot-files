@@ -22,7 +22,7 @@ vim.keymap.set('n', '<leader>o', 'o<Esc>k$')
 vim.keymap.set('n', '<leader>O', 'O<Esc>j0')
 
 -- Clear nvim highlighting
-vim.keymap.set('n', '<leader>c', ':nohlsearch<Enter>')
+vim.keymap.set('n', '<leader>C', ':nohlsearch<Enter>')
 
 -- Keybinding to clear highlighting of searched term by hitting enter
 vim.keymap.set('n', '<CR>', ':noh<CR><CR>')
@@ -33,18 +33,14 @@ vim.keymap.set('n', '<leader>p', 'cw<C-r>0<Esc>l')
 -- Modify `S` behavior so does not remove entire line but just from current
 vim.keymap.set('n', 'S', 'DA')
 
--- Quick way to write -- and --- in Markdown formats
-vim.keymap.set('n', '@n', 'qna &ndash; <Esc>q')
-vim.keymap.set('n', '@m', 'qma &mdash; <Esc>q')
-
--- Quick way to write | | | for making a two-column table row in Markdown
-vim.keymap.set('n', '@p', 'qpo<Esc>xi| | |<Esc>0q')
-
 -- Quick way to wrap a word in double quotes
-vim.keymap.set('n', '@d', 'qdciw""<Esc>Pq')
+vim.keymap.set('n', '<leader>d', 'ciw""<Esc>P')
 
 -- Quick way to wrap a word in single quotes
-vim.keymap.set('n', '@s', "qsciw''<Esc>Pq")
+vim.keymap.set('n', '<leader>s', "ciw''<Esc>P")
+
+-- Quick way to toggle capitalization in a word
+vim.keymap.set('n', '<leader>c', "viw~<Esc>")
 
 -- vim.keymap.set configurations that work in nvim but are ignored by VS Code:
 -- Seems like the vim.keymap configs are not picked up by VS Code;
