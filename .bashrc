@@ -103,6 +103,13 @@ alias journal="
     echo Move to original directory
     cd $START_WD
     "
+alias asshole-calendar="
+    echo Move to asshole_calendar project
+    cd $PROJECTS/asshole_calendar
+    echo Start asshole_calendar - use ctrl + c to stop
+    start http://localhost:5000
+    poetry run python main.py
+    "
 
 alias debug-poker-hands="code $PROJECTS/poker-hands"
 alias poker-hands="docker run --rm -i --name poker-trainer poker-hands-training"
