@@ -221,6 +221,56 @@ Finally, you can confirm it worked by opening a fresh bash terminal and running:
 poetry --version
 ```
 
+### Initializing a poetry virtual environment
+
+Navigate to a project with a `pyproject.toml` file and run:
+
+```sh
+poetry install
+```
+
+If you run into problems because it does not detect a compatible version of python, check that `pyenv` has the correct version available with:
+
+```sh
+pyenv versions
+```
+
+If it does not, you can install the correct version with:
+
+```sh
+pyenv install <version>
+```
+
+Then you can set the local version of python for the project with:
+
+```sh
+pyenv local <version>
+```
+
+Then you can run `poetry install` again.
+
+If you are still running into issues and are on a Windows machine, try to see if you need to modify the Windows Path, which may default to the Windows version of python instead of using those you installed with `pyenv`. Find the default python version used with:
+
+```sh
+which python
+```
+
+If it's not one specified by your `pyenv` installation, you may need to modify the path or remove `python.exe` and `python3.exe` from the WindowsApps folder:
+
+```sh
+cd ~/AppData/Local/Microsoft/WindowsApps
+rm python.exe
+rm python3.exe
+```
+
+If you still fail to get `poetry` to use the `pyenv local <version>` when trying `poetry install`, modify `poetry` to use the `bat` files instead:
+
+```sh
+poetry env use python.bat
+```
+
+Now `poetry install` should work successfully.
+
 ### Getting started with python
 
 These links provide information on getting started with python:

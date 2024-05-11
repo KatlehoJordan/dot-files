@@ -10,8 +10,8 @@ WSL_CONFIG="$HOME/.wslconfig"
 PROGRAM_FILES="/C/Program\ Files"
 
 # Updating the path
-export PATH=$PATH:$HOME/.pyenv/pyenv-win/bin
 export PATH=$PATH:$HOME/.pyenv/pyenv-win/shims
+export PATH=$PATH:$HOME/.pyenv/pyenv-win/bin
 export PATH=$PATH:$HOME/AppData/Roaming/Python/Scripts
 
 
@@ -24,7 +24,9 @@ alias edit-init.lua="code ~/AppData/Local/nvim/init.lua"
 alias edit-bashrc="code $BASHRC"
 alias src-bashrc="source $BASHRC"
 alias edit-wslconfig="code $WSL_CONFIG"
-alias python="winpty python"
+
+# Not sure if this is needed or desirable if pyenv is set up correctly...
+# alias python="winpty python"
 
 ## Shortcuts to always cp and rm recursively
 alias cp="cp -r"
@@ -113,9 +115,6 @@ alias asshole-calendar="
 
 alias debug-poker-hands="code $PROJECTS/poker-hands"
 alias poker-hands="docker run --rm -i --name poker-trainer poker-hands-training"
-alias python-playground="code $PROJECTS/ds-playground/python"
-alias ipython="docker run --rm -i --name python-playground python-playground"
-
 alias notes="code $PROJECTS/notes"
 
 # Customizing the prompt
@@ -136,3 +135,8 @@ alias ls='ls --color=auto -alGp'
 
 # Enable Neovim-style key bindings
 set -o vi
+
+# Function for math in bash command line
+math() {
+    echo $(($@))
+}
