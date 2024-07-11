@@ -12,6 +12,8 @@ vim.opt.incsearch = true
 vim.opt.ic = true
 -- Show partial matches
 vim.opt.is = true
+-- Add underscore as a word character
+vim.opt.iskeyword="@,48-57,192-255"
 
 
 -- vim.keymap.set configurations that work both in standalone-nvim and VS Code:
