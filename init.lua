@@ -43,6 +43,10 @@ vim.keymap.set('n', '<leader>s', "ciw''<Esc>P")
 
 -- Quick way to toggle capitalization in a word
 vim.keymap.set('n', '<leader>c', "viw~<Esc>")
+vim.keymap.set('n', '<leader>C', "viW~<Esc>")
+
+-- Quick way to copy the highlighted section of text to clipboard
+vim.keymap.set('v', '<D-c>', '"+y')
 
 -- vim.keymap.set configurations that work in nvim but are ignored by VS Code:
 -- Seems like the vim.keymap configs are not picked up by VS Code;
