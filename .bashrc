@@ -73,6 +73,7 @@ alias gacp="sh scripts/gacp.sh"
 THIS_YEAR=$(date +"%Y")
 alias budget-tracker="start $PROJECTS/daily-scraping/inputs/budgetTracker$THIS_YEAR.xlsm"
 
+
 alias debug-daily-scraping="code $PROJECTS/daily-scraping"
 alias daily-scraping="
     START_WD=$(pwd)
@@ -105,16 +106,18 @@ alias journal="
     echo Move to original directory
     cd $START_WD
     "
-alias asshole-calendar="
-    echo Move to asshole_calendar project
-    cd $PROJECTS/asshole_calendar
-    echo Start asshole_calendar - use ctrl + c to stop
-    start http://localhost:5000
+
+alias debug-holdem-simulator="code $PROJECTS/holdem_simulator"
+alias holdem-simulator="
+    START_WD=$(pwd)
+    echo Move to holdem_simulator
+    cd $PROJECTS/holdem_simulator
+    echo Start holdem_simulator - use q to quit
     poetry run python main.py
+    echo Move to original directory
+    cd $START_WD
     "
 
-alias debug-poker-hands="code $PROJECTS/poker-hands"
-alias poker-hands="docker run --rm -i --name poker-trainer poker-hands-training"
 alias notes="code $PROJECTS/notes"
 
 # Customizing the prompt
