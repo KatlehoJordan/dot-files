@@ -1,3 +1,2 @@
 [virtualenvs]
 in-project = true
-prompt = '''\033[1;32mPoetry virtual environment {project_name}-py{python_version}\033[0m'''
