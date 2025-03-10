@@ -1,9 +1,12 @@
+-- On Windows, save this file at ~/AppData/Local/nvim/
 -- Use relative line numbers
 vim.opt.relativenumber = true
 -- Use absolute line number in gutter
 vim.opt.number = true
--- Shows row and column number in bottomright of terminal
+-- Shows row and column number in bottom right of terminal
 vim.opt.ruler = true
+-- Use system clipboard for all yank, delete, change, and put operations
+vim.opt.clipboard = 'unnamedplus'
 
 -- Modify searches done with `/` behavior
 -- Highlights searches as you type

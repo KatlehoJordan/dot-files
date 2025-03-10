@@ -16,7 +16,6 @@ MS Office (Excel, Word, Powerpoint)
 Powershell
 7zip
 flux
-bank ID
 docker desktop
 mullvad vpn
 PowerToys (for keyboard remapping)

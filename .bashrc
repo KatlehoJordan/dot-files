@@ -114,6 +114,8 @@ alias holdem-simulator="
     cd $PROJECTS/holdem_simulator
     echo Start holdem_simulator - use q to quit
     poetry run python main.py
+    echo open project to examine results
+    debug-holdem-simulator
     echo Move to original directory
     cd $START_WD
     "
