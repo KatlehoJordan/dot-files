@@ -81,11 +81,7 @@ alias daily-scraping="
     echo Performing git backup
     gacp
     echo Running daily scraper
-    docker run -i --name scraper-container daily-scraping-scraper
-    echo Copying outputs from daily-scraper to host machine outputs
-    docker cp -a scraper-container:outputs/ .
-    echo Removing docker container
-    docker rm scraper-container
+    uv run python main.py
     echo Move to original directory
     cd $START_WD
     echo Opening budget tracker
